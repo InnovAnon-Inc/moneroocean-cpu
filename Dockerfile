@@ -111,7 +111,7 @@ ARG DOCKER_TAG=generic
 ENV DOCKER_TAG ${DOCKER_TAG}
 
 RUN cd       build                                                      \
- && /configure.sh -G Ninja                                              \
+ && /configure.sh                                                       \
       -DWITH_HWLOC=ON -DWITH_LIBCPUID=OFF -DWITH_HTTP=OFF -DWITH_ASM=ON \
       -DWITH_TLS=OFF -DWITH_OPENCL=OFF -DWITH_CUDA=OFF -DWITH_NVML=OFF  \
       -DCMAKE_BUILD_TYPE=Release -DWITH_DEBUG_LOG=OFF -DHWLOC_DEBUG=OFF \
